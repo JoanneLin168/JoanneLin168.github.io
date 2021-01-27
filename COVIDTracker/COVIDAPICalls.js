@@ -36,6 +36,17 @@ function getCountryData(country) {
 
 }
 
+function getSlug(country) {
+    var countrySlug = null;
+    for (var i=0; i<countriesData.length; i++) {
+        if (countriesData[i].Country == country) {
+            countrySlug = countriesData[i].Slug;
+            break
+        }
+    }
+    return countrySlug;
+}
+
 // Function to define innerHTML for HTML table 
 function show(data) {
     var country = document.getElementById("country");

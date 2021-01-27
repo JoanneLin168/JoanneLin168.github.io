@@ -69,6 +69,7 @@
                 <div class="row"><p id="totalDeaths"></p></div>
                 <div class="row"><p id="totalRecovered"></p></div>
                 <div class="row"><p id="updatedAt" class="text-muted"></p></div>
+                <div id="graphRow" class="row"></div>
 
 
                 <div class="row"> <!--References row-->
@@ -100,17 +101,16 @@
 
 
 
+<!-- Third-party files-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-<!--<script src="countriesAPICalls.js"></script>-->
 <script src="COVIDTracker/COVIDAPICalls.js"></script>
-
+<script src="COVIDTracker/countryGraphAPICalls.js"></script>
 <script src="COVIDTracker/autocomplete.js"></script>
 <script>
     autocomplete(document.getElementById("countryInput"), countries);
 </script>
-
-
 <script>
     function showCountryData() {
         var error = document.getElementById("error");
@@ -118,6 +118,10 @@
         var result = document.getElementById("countryInput").value;
         if (countries.includes(result)) {
             getCountryData(result);
+
+            var slug = getSlug(result);
+            var url = graph_url + slug + graph_url_ending;
+            getGraphAPI(url);
         }
         else {
             var error = document.getElementById("error");
@@ -131,8 +135,11 @@
             totalConfirmed.textContent = "";
             totalRecovered.textContent = "";
             updatedAt.textContent = "";
+            
+            var graphRow = document.getElementById("graphRow");
+            if (graphRow.hasChildNodes()) {
+                graphRow.innerHTML = "";
+            }
         }
     }
 </script>
-
-
