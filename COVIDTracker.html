@@ -44,7 +44,18 @@
                     <div class="col-sm">
                         <h1 style="font-size: 64px;">COVID Tracker</h1>
                     </div>
-				</div>
+                </div>
+                
+                <div class="row">
+                    <h5 class="text-danger">Please note:</h5>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li class="text-danger">The API used to get the data is frequently unavailable, so you may not get to use the API service</li>
+                        <li class="text-danger">The API can be quite slow at times, so if the autocomplete is not working, refresh the page and try again</li>
+                        <li class="text-danger">Generating a graph may take a few seconds, please be patient</li>
+                    </ul>
+                </div>
 				
 				<div class="row">
 					<h4>Please enter a country:</h4>
@@ -56,6 +67,7 @@
                             <input id="countryInput" type="text" placeholder="Country">
                         </div>
                         <button type="button" class="btn btn-primary" onclick="showCountryData()">Search</button>
+                        <button type="button" class="btn btn-primary" onclick="showGlobalData()">View Global Data</button>
                     </form>
                 </div>
                 
@@ -107,6 +119,7 @@
 
 <script src="COVIDTracker/COVIDAPICalls.js"></script>
 <script src="COVIDTracker/countryGraphAPICalls.js"></script>
+
 <script src="COVIDTracker/autocomplete.js"></script>
 <script>
     autocomplete(document.getElementById("countryInput"), countries);
@@ -141,5 +154,19 @@
                 graphRow.innerHTML = "";
             }
         }
+    }
+</script>
+<script>
+    function showGlobalData() {
+        document.getElementById('countryInput').value = ''
+        getGlobalData();
+        
+        var graphRow = document.getElementById("graphRow");
+        if (graphRow.hasChildNodes()) {
+            graphRow.innerHTML = "";
+        }
+
+        var error = document.getElementById("error");
+        error.textContent = "Note: Unable to find an API that returns a global timeline and therefore cannot generate a graph. Sorry about that :(";
     }
 </script>

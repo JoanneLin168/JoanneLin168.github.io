@@ -4,24 +4,34 @@
 const api_url =  
       "https://api.covid19api.com/summary";
 var countriesData = null;
+var globalData = null;
 var countries = [];
-var allCountriesData = getCovidAPI(api_url);
 
 // Defining async function 
 async function getCovidAPI(url) {
-    // Storing response 
-    const response = await fetch(url);
+    try {
+        // Storing response 
+        const response = await fetch(url);
 
-    // Storing data in form of JSON 
-    var data = await response.json();
-
-    if (response) {
-        countriesData = data.Countries;
-        for (var i=0; i<countriesData.length; i++) {
-            countries.push(countriesData[i].Country);
+        // Storing data in form of JSON 
+        var data = await response.json();
+    
+        if (response) {
+            // Stores countries data
+            countriesData = data.Countries;
+            for (var i=0; i<countriesData.length; i++) {
+                countries.push(countriesData[i].Country);
+            }
+    
+            // Stores global data
+            globalData = data.Global;
         }
     }
-    return data;
+    
+    catch (err) {
+        var error = document.getElementById("error");
+        error.textContent = (err.message + " Please try again later");
+    }
 }
 
 function getCountryData(country) {
@@ -70,3 +80,12 @@ function show(data) {
     totalRecovered.textContent = "Total recovered: " + data.TotalRecovered;
     updatedAt.textContent = "Updated at: " + data.Date;
 } 
+
+getCovidAPI(api_url);
+
+function getGlobalData() {
+    var data = globalData;
+    data.Country = "Global";
+    data.CountryCode = "n/a";
+    show(data);
+}

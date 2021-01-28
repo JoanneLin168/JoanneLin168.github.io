@@ -12,28 +12,36 @@ var colours = [
 ]
 
 async function getGraphAPI(url) {
-    // Storing response 
-    const response = await fetch(url);
+    try {
+        // Storing response 
+        const response = await fetch(url);
 
-    // Storing data in form of JSON 
-    var data = await response.json();
+        // Storing data in form of JSON 
+        var data = await response.json();
 
-    var dates = [];
-    var cases = [];
+        var dates = [];
+        var cases = [];
 
-    if (response) {
-        for (var i=0; i<data.length; i++) {
-            cases.push(data[i].Cases);
-            dates.push(data[i].Date.slice(0, -10));
+        if (response) {
+            for (var i=0; i<data.length; i++) {
+                cases.push(data[i].Cases);
+                dates.push(data[i].Date.slice(0, -10));
+            }
+        }
+        if (cases.length > 0) {
+            drawGraph(cases, dates);
+        }
+        else {
+            var error = document.getElementById("error");
+            console.log(data.message);
+            error.textContent = "Unable to generate graph; this may be due to how the API has timeline data for most countries but not all";
         }
     }
-    if (cases.length > 0) {
-        drawGraph(cases, dates);
-    }
-    else {
+    catch (err) {
         var error = document.getElementById("error");
-        error.textContent = data.message;
+        error.textContent = err.message + " Please try again later";
     }
+    
 }
 
 function drawGraph(cases, dates) {
