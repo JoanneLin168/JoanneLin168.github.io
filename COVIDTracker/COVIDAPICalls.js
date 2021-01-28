@@ -46,6 +46,14 @@ function getCountryData(country) {
 
 }
 
+function getGlobalData() {
+    var data = globalData;
+    data.Country = "Global";
+    data.CountryCode = "n/a";
+    data.Date = countriesData[0].Date;
+    show(data);
+}
+
 function getSlug(country) {
     var countrySlug = null;
     for (var i=0; i<countriesData.length; i++) {
@@ -82,10 +90,3 @@ function show(data) {
 } 
 
 getCovidAPI(api_url);
-
-function getGlobalData() {
-    var data = globalData;
-    data.Country = "Global";
-    data.CountryCode = "n/a";
-    show(data);
-}
