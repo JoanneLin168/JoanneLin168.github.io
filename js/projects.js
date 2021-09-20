@@ -11,7 +11,7 @@ allProjects = {
             "title": "OPTIJJ Laboratory",
             "text": "Created a Sci-Fi dungeon crawler-esque game using Python and the Pygame library for the CSS Gamejam 2020 in a team of 6.",
             "link": "https://github.com/JoanneLin168/OPTIJJ-Gamejam-2020",
-            "image": "images/CAHR.png",
+            "image": "images/OPTIJJ.png",
             "date": "November 2020"
         },
         {
@@ -23,7 +23,7 @@ allProjects = {
         },
         {
             "title": "Covid Tracker",
-            "text": "Creating a website that allows users to view the trends of coronavirus around the globe.",
+            "text": "Created a website that allows users to view the trends of coronavirus around the globe.",
             "link": "https://joannelin168.github.io/COVIDTracker.html",
             "image": "images/COVIDTracker.png",
             "date": "January 2021"
@@ -36,6 +36,13 @@ allProjects = {
             "text": "Creating a website that allows multiple users to draw on a whiteboard together",
             "link": "http://jyl-online-whiteboard.herokuapp.com/",
             "image": "images/whiteboard.png",
+            "date": "September 2021"
+        },
+        {
+            "title": "Jo's Game Room",
+            "text": "Creating a desktop application for multiple users to sit around in a virtual game room and play board games together",
+            "link": "https://github.com/JoanneLin168/JosGameRoom",
+            "image": "images/NoImageAvailable.png",
             "date": "September 2021"
         }
     ]
