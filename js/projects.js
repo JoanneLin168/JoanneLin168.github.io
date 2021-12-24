@@ -44,15 +44,7 @@ allProjects = {
         }
 
     ],
-    "incomplete": [
-        {
-            "title": "Jo's Game Room",
-            "text": "Creating a desktop application for multiple users to sit around in a virtual game room and play board games together",
-            "link": "https://github.com/JoanneLin168/JosGameRoom",
-            "image": "images/NoImageAvailable.png",
-            "date": "September 2021"
-        },
-    ]
+    "incomplete": []
 }
 
 showcase = [
