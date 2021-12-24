@@ -119,8 +119,8 @@ function displayShowcase() {
                     <h5 class="card-title">`+showcase[index].title+`</h5>
                     <p class="card-text">`+showcase[index].text+`</p>
                     <p class="card-text"><small class="text-muted">`+showcase[index].date+`</small></p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal`+index+`">More details</button>
                 </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal`+index+`">More details</button>
             </div>
         </div>
         <div class="modal fade" id="modal`+i+`" tabindex="-1" role="dialog" aria-labelledby="modal`+i+`Label" aria-hidden="true">
