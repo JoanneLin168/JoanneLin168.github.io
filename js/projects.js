@@ -97,6 +97,7 @@ function displayProjects(type, projects) {
                     <h5 class="card-title">`+projects[index].title+`</h5>
                     <p class="card-text">`+projects[index].text+`</p>
                     <p class="card-text"><small class="text-muted">`+projects[index].date+`</small></p>
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#modal`+index+`">More details</a>
                 </div>
             </div>
         </div>
@@ -105,7 +106,7 @@ function displayProjects(type, projects) {
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modal`+index+`Label">`+showcase[index].title+`</h5>
+                        <h5 class="modal-title" id="modal`+index+`Label">`+projects[index].title+`</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -146,7 +147,6 @@ function displayShowcase() {
                     <h5 class="card-title">`+showcase[index].title+`</h5>
                     <p class="card-text">`+showcase[index].text+`</p>
                     <p class="card-text"><small class="text-muted">`+showcase[index].date+`</small></p>
-                    <a class="btn btn-primary" data-toggle="modal" data-target="#modal`+index+`">More details</a>
                 </div>
             </div>
         </div>
