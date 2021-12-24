@@ -109,6 +109,10 @@ function displayShowcase() {
     var row = document.createElement("div");
     row.className = "row";
     displayArea.appendChild(row);
+
+    if (showcase.length < 1) {
+        row.innerHTML = "There are currently no projects here."
+    } 
     
     while (index < showcase.length) {
         row.innerHTML += `
