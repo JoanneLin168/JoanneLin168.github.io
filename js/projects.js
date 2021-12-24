@@ -83,6 +83,10 @@ function displayProjects(type, projects) {
     row.className = "row";
     row.id = type+"_row";
     displayArea.appendChild(row);
+
+    if (projects.length < 1) {
+        row.innerHTML = "There are currently no projects here."
+    }
     
     while (index < projects.length) {
         row.innerHTML += `
@@ -128,6 +132,10 @@ function displayShowcase() {
     var row = document.createElement("div");
     row.className = "row";
     displayArea.appendChild(row);
+
+    if (showcase.length < 1) {
+        row.innerHTML = "There are currently no projects here."
+    }
     
     while (index < showcase.length) {
         row.innerHTML += `
