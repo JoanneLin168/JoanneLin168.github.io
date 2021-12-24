@@ -110,8 +110,8 @@ function displayProjects(type, projects) {
                 <div class="card-body">
                     <h5 class="card-title">`+projects[index].title+`</h5>
                     <p class="card-text">`+projects[index].summary+`</p>
-                    <a class="card-text"><small class="text-muted">Languages: `+showcase[index].languages+`</small></p>
-                    <a class="card-text"><small class="text-muted">`+projects[index].date+`</small></a>
+                    <p class="card-text"><small class="text-muted">Languages: `+projects[index].languages+`</small></p>
+                    <p class="card-text"><small class="text-muted">`+projects[index].date+`</small></p>
                     <a class="btn btn-primary" data-toggle="modal" data-target="#modal`+index+`">More details</a>
                 </div>
             </div>
@@ -159,8 +159,8 @@ function displayShowcase() {
                 <div class="card-body">
                     <h5 class="card-title">`+showcase[index].title+`</h5>
                     <p class="card-text">`+showcase[index].text+`</p>
-                    <a class="card-text"><small class="text-muted">Languages: `+showcase[index].languages+`</small></p>
-                    <a class="card-text"><small class="text-muted">`+showcase[index].date+`</small></p>
+                    <p class="card-text"><small class="text-muted">Languages: `+showcase[index].languages+`</small></p>
+                    <p class="card-text"><small class="text-muted">`+showcase[index].date+`</small></p>
                 </div>
             </div>
         </div>
