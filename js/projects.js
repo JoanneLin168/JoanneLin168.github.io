@@ -29,6 +29,13 @@ allProjects = {
             "date": "January 2021"
         },
         {
+            "title": "Online Whiteboard",
+            "text": "Creating a website that allows multiple users to draw on a whiteboard together",
+            "link": "http://jyl-online-whiteboard.herokuapp.com/",
+            "image": "images/whiteboard.png",
+            "date": "September 2021"
+        },
+        {
             "title": "Santa's Workshop",
             "text": "Created a simulation that allows users to make an RPC to a server which simulates Santa's Workshop via multithreading.",
             "link": "https://github.com/JoanneLin168/Santas-Workshop",
@@ -39,19 +46,12 @@ allProjects = {
     ],
     "incomplete": [
         {
-            "title": "Online Whiteboard",
-            "text": "Creating a website that allows multiple users to draw on a whiteboard together",
-            "link": "http://jyl-online-whiteboard.herokuapp.com/",
-            "image": "images/whiteboard.png",
-            "date": "September 2021"
-        },
-        {
             "title": "Jo's Game Room",
             "text": "Creating a desktop application for multiple users to sit around in a virtual game room and play board games together",
             "link": "https://github.com/JoanneLin168/JosGameRoom",
             "image": "images/NoImageAvailable.png",
             "date": "September 2021"
-        }
+        },
     ]
 }
 
