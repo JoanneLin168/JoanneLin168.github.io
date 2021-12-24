@@ -27,6 +27,13 @@ allProjects = {
             "link": "https://joannelin168.github.io/COVIDTracker.html",
             "image": "images/COVIDTracker.png",
             "date": "January 2021"
+        },
+        {
+            "title": "Santa's Workshop",
+            "text": "Created a simulation that allows users to make an RPC to a server which simulates Santa's Workshop via multithreading.",
+            "link": "https://github.com/JoanneLin168/Santas-Workshop",
+            "image": "images/SantasWorkshop.png",
+            "date": "December 2021"
         }
 
     ],
