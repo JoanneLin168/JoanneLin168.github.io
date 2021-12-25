@@ -1,0 +1,53 @@
+---
+layout: default
+title: Home
+---
+
+<div class="jumbotron text-white bg-dark text-center">
+        <h1 class="display-4">Welcome to my website!</h1>
+        <p class="lead">My name is Joanne Lin, a second-year student studying Computer Science (MEng) at University of Bristol.</p>
+        <p class="lead">I am the Course Representative - for two years in a row now! I am also the Talks & Careers Rep and the Equality Officer for the Women in STEM society, and the General Officer for Robogals.</p>
+        <p class="lead">I often code many projects in several different languages but my main languages are: Java, Golang, Javascript and Python</p>
+        <hr class="my-4">
+        <p>Feel free to browse around the website :)</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/projects" role="button">Projects</a>
+            <a class="btn btn-primary btn-lg" href="/cv" role="button">CV</a>
+        </p>
+        <br>
+</div>
+
+{% if page.url == "/" %}
+<section class="featured-posts">
+    <div class="section-title">
+        <h2><span>Featured</span></h2>
+    </div>
+    <div class="row">
+
+    {% for post in site.posts %}
+        {% if post.featured == true %}
+            {% include featuredbox.html %}
+        {% endif %}
+    {% endfor %}
+
+    </div>
+</section>
+{% endif %}
+
+<div class="jumbotron bg-secondary text-center">
+    <div class="container">
+        <h1 class="display-4">Want to see more projects?</h1>
+        <p class="lead">Click the link below to view all of my public projects in more detail!</p>
+        <p class="lead">
+            <a class="btn btn-success btn-lg" href="/projects" role="button">View all projects</a>
+        </p>
+    </div>
+</div>
+
+<section>
+    <div class="section-title">
+        <h2><span>Skills</span></h2>
+    </div>
+    <p>Not completed yet!</p>
+</section>
+

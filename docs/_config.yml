@@ -1,0 +1,32 @@
+# Site
+name: "Joanne Lin's Portfolio"
+title: "Joanne Lin"
+description: "2nd Year Computer Science (MEng) student studying at University of Bristol."
+logo: 'assets/images/logo/logo_black.png'
+favicon: 'assets/images/logo/favicon.ico'
+baseurl: ""
+url: ""
+permalink: /:title/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
