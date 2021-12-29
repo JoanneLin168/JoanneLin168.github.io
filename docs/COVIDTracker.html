@@ -1,0 +1,107 @@
+---
+layout: default
+title: Covid Tracker
+permalink: /projects/Covid-Tracker-Run
+---
+
+<div class="row">
+    <h5 class="text-danger">Please note:</h5>
+</div>
+<div class="col">
+    <ul>
+        <li class="text-danger">The API used to get the data is frequently unavailable, so you may not get to use the API service</li>
+        <li class="text-danger">The API can be quite slow at times, so if the autocomplete is not working, refresh the page and try again</li>
+        <li class="text-danger">Generating a graph may take a few seconds, please be patient</li>
+    </ul>
+</div>
+
+<div class="row">
+    <h4>Please enter a country:</h4>
+</div>
+<div class="row">
+    <!--Make sure the form has the autocomplete function switched off:-->
+    <form autocomplete="off">
+        <div class="autocomplete" style="width:300px;">
+            <input id="countryInput" type="text" placeholder="Country">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="showCountryData()">Search</button>
+        <button type="button" class="btn btn-primary" onclick="showGlobalData()">View Global Data</button>
+    </form>
+</div>
+
+<div class="row"><p id="error" class="text-danger"></p></div>
+<div class="row"><p id="country"></p></div>
+<div class="row"><p id="code"></p></div>
+<div class="row"><p id="confirmedToday"></p></div>
+<div class="row"><p id="deathsToday"></p></div>
+<div class="row"><p id="recoveredToday"></p></div>
+<div class="row"><p id="totalConfirmed"></p></div>
+<div class="row"><p id="totalDeaths"></p></div>
+<div class="row"><p id="totalRecovered"></p></div>
+<div class="row"><p id="updatedAt" class="text-muted"></p></div>
+<div id="graphRow" class="row"></div>
+
+
+<div class="row"> <!--References row-->
+    <h6>Data taken from: <a href="https://covid19api.com/">https://covid19api.com/</a></h6>
+</div>
+  </body>
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<script src="{{site.baseurl}}/assets/js/COVIDTracker/COVIDAPICalls.js"></script>
+<script src="{{site.baseurl}}/assets/js/COVIDTracker/countryGraphAPICalls.js"></script>
+
+<script src="{{site.baseurl}}/assets/js/COVIDTracker/autocomplete.js"></script>
+<script>
+    autocomplete(document.getElementById("countryInput"), countries);
+</script>
+<script>
+    function showCountryData() {
+        var error = document.getElementById("error");
+        error.innerHTML = "";
+        var result = document.getElementById("countryInput").value;
+        if (countries.includes(result)) {
+            getCountryData(result);
+
+            var slug = getSlug(result);
+            var url = graph_url + slug + graph_url_ending;
+            getGraphAPI(url);
+        }
+        else {
+            var error = document.getElementById("error");
+            error.textContent = "Invalid input, please try again";
+            country.textContent = "";
+            code.textContent = "";
+            deathsToday.textContent = "";
+            confirmedToday.textContent = "";
+            recoveredToday.textContent = "";
+            totalDeaths.textContent = "";
+            totalConfirmed.textContent = "";
+            totalRecovered.textContent = "";
+            updatedAt.textContent = "";
+            
+            var graphRow = document.getElementById("graphRow");
+            if (graphRow.hasChildNodes()) {
+                graphRow.innerHTML = "";
+            }
+        }
+    }
+</script>
+<script>
+    function showGlobalData() {
+        document.getElementById('countryInput').value = ''
+        getGlobalData();
+        
+        var graphRow = document.getElementById("graphRow");
+        if (graphRow.hasChildNodes()) {
+            graphRow.innerHTML = "";
+        }
+
+        var error = document.getElementById("error");
+        error.textContent = "Note: Unable to find an API that returns a global timeline and therefore cannot generate a graph. Sorry about that :(";
+    }
+</script>
