@@ -2,7 +2,7 @@
 layout: post
 title:  "Santa's workshop"
 image: assets/images/SantasWorkshop.png
-description: A simulation that allows users to make an RPC to a server which simulates Santa's Workshop using concurrency."
+description: A simulation that allows users to make an RPC to a server which simulates Santa's Workshop using concurrency.
 languages: "Golang"
 permalink: "/projects/Santas-Workshop"
 featured: true
