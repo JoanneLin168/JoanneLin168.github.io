@@ -1,7 +1,7 @@
 # Site
 name: "Joanne Lin's Portfolio"
 title: "Joanne Lin"
-description: "2nd Year Computer Science (MEng) student studying at University of Bristol."
+description: "2nd Year BSC (Hons) Computer Science student studying at University of Bristol."
 logo: 'assets/images/logo/logo_black.png'
 favicon: 'assets/images/logo/favicon.ico'
 baseurl: ""
