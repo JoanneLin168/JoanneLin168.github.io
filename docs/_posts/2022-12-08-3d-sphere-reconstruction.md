@@ -5,6 +5,7 @@ image: assets/images/3d-sphere-reconstruction.png
 description: "A stereo vision system that can accurately reconstruct spheres in 3D"
 languages: "Python"
 permalink: "/projects/3DSphereReconstruction"
+featured: true
 ---
 For Part 2 of my "Image Processing and Computer Vision" coursework, I had to create a stereo vision system that uses 2 cameras in a 3D simulation to reconstruct the 6 observable spheres.
 
