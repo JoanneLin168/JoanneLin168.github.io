@@ -19,4 +19,4 @@ Below are some examples:
 ![NoEntry11.jpg](/assets/images/cnn_fruit_detector/prediction3.jpg)
 ![NoEntry15.jpg](/assets/images/cnn_fruit_detector/prediction4.jpg)
 
-Credits to https://debuggercafe.com/custom-object-detection-using-pytorch-faster-rcnn/ for providing an excellent tutorial.
+Credits to [https://debuggercafe.com/custom-object-detection-using-pytorch-faster-rcnn/] for providing an excellent tutorial.
