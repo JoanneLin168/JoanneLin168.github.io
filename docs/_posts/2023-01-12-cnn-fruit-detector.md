@@ -14,9 +14,9 @@ The dataset used for training and validation can be found [here](https://www.kag
 Due to limited resources, I was only capable of running the neural network with 4 epochs, however, the results were still fairly accurate.
 
 Below are some examples:
-![NoEntry4.jpg](/assets/images/cnn_fruit_detector/prediction1.jpg)
-![NoEntry2.jpg](/assets/images/cnn_fruit_detector/prediction2.jpg)
-![NoEntry11.jpg](/assets/images/cnn_fruit_detector/prediction3.jpg)
-![NoEntry15.jpg](/assets/images/cnn_fruit_detector/prediction4.jpg)
+![prediction1.jpg](/assets/images/cnn_fruit_detector_results/prediction1.jpg)
+![prediction2.jpg](/assets/images/cnn_fruit_detector_results/prediction2.jpg)
+![prediction3.jpg](/assets/images/cnn_fruit_detector_results/prediction3.jpg)
+![prediction4.jpg](/assets/images/cnn_fruit_detector_results/prediction4.jpg)
 
 Credits to [https://debuggercafe.com/custom-object-detection-using-pytorch-faster-rcnn/] for providing an excellent tutorial.
