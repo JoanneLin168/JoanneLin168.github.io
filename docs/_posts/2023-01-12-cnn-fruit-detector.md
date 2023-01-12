@@ -19,4 +19,4 @@ Below are some examples:
 ![prediction3.jpg](/assets/images/cnn_fruit_detector_results/prediction3.jpg)
 ![prediction4.jpg](/assets/images/cnn_fruit_detector_results/prediction4.jpg)
 
-Credits to [https://debuggercafe.com/custom-object-detection-using-pytorch-faster-rcnn/] for providing an excellent tutorial.
+Credits to <https://debuggercafe.com/custom-object-detection-using-pytorch-faster-rcnn/> for providing an excellent tutorial.
