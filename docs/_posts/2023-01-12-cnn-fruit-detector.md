@@ -13,7 +13,7 @@ The dataset used for training and validation can be found [here](https://www.kag
 
 Due to limited resources, I was only capable of running the neural network with 4 epochs, however, the results were still fairly accurate.
 
-Below are some examples:
+Below are the results of the test images. As you can see with the second image, it predicted that they were all bananas but was unable to correctly identify the bounding boxes. This can be improved with more epochs and more images to train on.
 ![prediction1.jpg](/assets/images/cnn_fruit_detector_results/prediction1.jpg)
 ![prediction2.jpg](/assets/images/cnn_fruit_detector_results/prediction2.jpg)
 ![prediction3.jpg](/assets/images/cnn_fruit_detector_results/prediction3.jpg)
