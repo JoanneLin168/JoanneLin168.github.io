@@ -9,7 +9,7 @@ featured: true
 ---
 As practice for my final project, "Deep Learning for Accurately Counting Great Apes in Camera Trap Videos", I created a fruit detector that uses a Region Based Convolutional Neural Network (RCNN) to detect fruits in an image. I used PyTorch as my framework.
 
-The dataset used for training and validation can be found [here](https://www.kaggle.com/datasets/mbkinaci/fruit-images-for-object-detection). The dataset contains 90 images of apples, oranges and bananas, and also provided the bounding boxes of each fruit. The dataset was split into 80% training and 20% validation. The test images were stock images found on the internet.
+The dataset used for training and validation can be found [here](https://www.kaggle.com/datasets/mbkinaci/fruit-images-for-object-detection). The dataset contains 75 images of apples, oranges and bananas, and also provided the bounding boxes of each fruit. The dataset was split into 80% training and 20% validation. The test images were stock images found on the internet.
 
 Due to limited resources, I was only capable of running the neural network with 4 epochs, however, the results were still fairly accurate.
 
