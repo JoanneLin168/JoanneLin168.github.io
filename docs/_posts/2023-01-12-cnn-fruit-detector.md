@@ -2,7 +2,7 @@
 layout: post
 title:  "CNN Fruit Detector"
 image: assets/images/cnn-fruit-detector.png
-description: "A no entry sign detector using classical Computer Vision techniques"
+description: "Using PyTorch RCNN model to localise fruit in images"
 languages: "Python"
 permalink: "/projects/CNNFruitDetector"
 featured: true
