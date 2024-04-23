@@ -1,0 +1,45 @@
+title: Joanne Lin Research
+author: Joanne Lin
+description: PhD Student
+portrait: assets/images/portrait.jpg
+address:
+  line_1: 1.23, 1 Cathedral Square, University of Bristol
+  line 2: Bristol BS1 5DD, UK
+email: joanne.lin*at*bris.ac.uk
+socials:
+  google_scholar: https://scholar.google.com/citations?user=GS37HaYAAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/joanne-lin-9503771ba
+  github: https://github.com/JoanneLin168
+  bris_research: https://research-information.bris.ac.uk/en/persons/joanne-lin
+cv: assets/files/cv.pdf
+
+url: ""
+baseurl: ""
+
+# Plugins
+# plugins:
+#   - jekyll-paginate
+#   - jekyll-sitemap
+#   - jekyll-feed
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "enabled"
