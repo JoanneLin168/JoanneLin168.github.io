@@ -1,0 +1,7 @@
+Download ruby version 3.1.4 (3.2 has bugs)
+
+Tutorial for making a Jekyll page: https://jekyllrb.com/tutorials/convert-site-to-jekyll/
+
+Jekyll stuff:
+- Remember to copy Gemfile and run `bundle install`
+- Then to run the Jekyll page: `bundle exec jekyll serve`

@@ -1,0 +1,149 @@
+---
+title: Joanne Lin Homepage
+layout: default
+---
+
+<div class="page-container">
+    <div class="inner">
+
+        <!-- Personal information section -->
+        <div class="container">
+            <div class="row">
+                <div class="row vertical-align">
+                    <div class="col-md-3">
+                        <div class="title">
+                            <p><img src='{{ site.portrait | absolute_url }}' width="100%" height="20%" class="center" /></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="title">
+                            <h1>{{ site.author }}</h1><h5>{{ site.description }}</h5>
+                            <p>{{ site.address.line_1 }}</p>
+                            <p>{{ site.address.line_2 }}</p>
+                            <pre>{{ site.email }}</pre>
+                            <ul class="list-inline list-social-icons mb-0">
+                                <li class="list-inline-item">
+                                    <a href="{{ site.socials.google_scholar }}">
+                                        <span class="fa-3x">
+                                            <i class="ai ai-google-scholar-square"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="{{ site.socials.linkedin }}">
+                                        <span class="fa-3x">
+                                            <i class="fab fa-linkedin"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="{{ site.socials.github }}">
+                                        <span class="fa-3x">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="{{ site.cv | absolute_url }}">
+                                        <span class="fa-3x">
+                                            <i class="ai ai-cv-square"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p><a href='https://www.bristol.ac.uk' target="_blank"><img src="{{site.baseurl}}/assets/images/uob-logo.svg" width="100%" height="20%" alt=""></a></p>
+                        <p><a href='https://www.bristol.ac.uk/vision-institute' target="_blank"><img src="{{site.baseurl}}/assets/images/bvilogo.svg" width="100%" height="20%" alt=""></a></p>
+                        <p><a href='https://vilab.blogs.bristol.ac.uk' target="_blank"><img src="{{site.baseurl}}/assets/images/VIL_logo.svg" width="100%" height="20%" alt=""></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- About section -->
+        <div class="container-md">
+            <h2>About</h2>
+            I am a PhD Candidate at the University of Bristol researching into segmentation and tracking in low-light videos,
+            funded by <a href="https://www.myworld-creates.com/" target="_blank">MyWorld Strength in Places</a>. 
+            I'm also a member of the <a href="https://vilab.blogs.bristol.ac.uk" target="_blank">Visual Information Laboratory</a>
+            and the <a href="https://www.bristol.ac.uk/vision-institute">Bristol Vision Institute</a>,
+            which are led by <a href="https://david-bull.github.io/">Prof. David Bull</a>
+            within the Department of Electrical and Electronic Engineering, University of Bristol.
+
+            My supervisors are: <a href="https://pui-nantheera.github.io/">Dr. Nantheera Anantrasirichai</a>
+            and <a href="https://david-bull.github.io/">Prof. David Bull.</a>
+        </div>
+        <hr />
+
+        <!-- Research Interests section -->
+        <div class="container">
+            <div class="row">
+                <div class="row vertical-align">
+                    <div class="col-md-auto">
+                        <div class="container-md">
+                            <h2>Research Interests</h2>
+                            <ul>
+                                <li>Machine Perception</li>
+                                <li>Image and video enhancement</li>
+                                <li>Machine Learning</li>
+                                <li>Computer Vision</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- This is just a temporary column -->
+                    <div class="col-md-auto">
+                        <div class="container-md">
+                            <h2>Currently researching</h2>
+                            <ul>
+                                <li>Instance segmentation in low-light images</li>
+                                <li>Segmentation and tracking in low-light videos</li>
+                                <li>Tracking to improve low-light enhancement</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        
+        <hr />
+        
+        <!-- News and Activities section -->
+        <!-- TODO: use pagination to automatically update the news and activities -->
+        <div class="container-md">
+            <h2 id="news">News & Activities</h2>
+            <ul>
+                <li>Feb 2024: Submitted paper "Feature Denoising for Low-Light Instance Segmentation using Weighted Non-Local Blocks" to ICIP 2024</li>
+            </ul>
+        </div>
+        <hr />
+
+        <!-- Projects section -->
+        <!-- TODO: use pagination to automatically update the projects -->
+        <div class="container-md">
+            <h2 id="projects">Projects</h2>
+
+            <div class="researchlist">
+                <a href="https://arxiv.org/abs/2402.18307">Feature Denoising for Low-Light Instance Segmentation using Weighted Non-Local Blocks</a>
+                <p>This project tackled the challenge of instance segmentation in low-light images by using the proposed weighted non-local blocks to denoise the feature maps.</p>
+                <div class="line_sep"></div>
+            </div>
+
+        </div>
+        <hr />
+        <div class="container-md">
+            <h2 id="publications">Publications</h2>
+            For all my publications see both google scholar and university site.
+            <ul>
+                <li><a href="{{ site.socials.google_scholar }}">Google Scholar</a></li>
+                <li><a href="{{ site.socials.bris_research }}">research-information.bris.ac.uk</a></li>
+            </ul>
+        </div>
+        <hr />
+    </div>
+</div>
