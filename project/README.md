@@ -27,5 +27,5 @@ may not display well and you should check.
 * This is also true of resized windows on any device.  The developed websites
   have looked fine up to that point.
 
-## Reference
+## Acknowledgements
 Template from: <https://github.com/csprh/VILABProjectTemplate>
