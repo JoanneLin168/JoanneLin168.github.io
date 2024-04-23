@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <title>HABNet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+</head>
+
+        <!-- you should probably put some google analytics / meta bits and pieces
+	    here : PRH 
+    <meta property="og:title" content="Paul Hill's Website"> etc.
+      <script async src="https://www.googletagmanager.com/gtag/js?id=??????????"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '??????????');
+  </script>
+    -->
+
+<body id="page-top">
+    <div class="page-container">
+        <div class="inner">
+            <div class="container">
+                <div class="row">
+                    <div class="row vertical-align">
+  
+                        <div class="col-md-10">
+                            <div class="title">
+                                <h1>HABNet: Machine Learning, Remote Sensing Based Detection of Harmful Algal Blooms</h1>
+                                <div class="container-sm">
+                                    <div class="row justify-content-md-center">
+                                        <div class="col-sm-auto">
+                                            <p><a href='http://www.bristol.ac.uk/engineering/people/paul-r-hill/index.html'>P.R. Hill</a></p>
+                                            <p>University of Bristol</p>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <p><a href='https://scholar.google.com/citations?user=srDQE6sAAAAJl'>A. Kumar</a></p>
+                                            <p>KUSTAR</p>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <p><a href='https://www.ku.ac.ae/academics/college-of-engineering/department/department-of-civil-infrastructure-and-environmental-engineering/people/dr-marouane-temimi'>M. Temimi</a></p>
+                                            <p>KUSTAR</p>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <p><a href='http://www.bristol.ac.uk/engineering/people/david-r-bull/index.html'>D.R. Bull</a></p>
+                                            <p>University of Bristol</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+			<div class="col-md-2">
+			    <p><a href='https://www.bristol.ac.uk'><img src="uob-logo.svg" width="100%" height="20%" alt=""></a></p>
+			    <p><a href='https://www.bristol.ac.uk/vision-institute'><img src="bvilogo.svg" width="100%" height="20%" alt=""></a></p>
+			     <p><a href='https://vilab.blogs.bristol.ac.uk'><img src="VIL_logo.svg" width="100%" height="20%" alt=""></a></p>
+			    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-md">
+                <h2>About</h2>
+                <p>This project is concerned with the application of machine learning techniques to develop a state-of-the-art detection and prediction system for spatiotemporal events found within remote sensing data; specifically, Harmful Algal Bloom events (HABs). </p>
+		<dl>
+			<dt>Funders</dt>
+			<dd>British Council for funding: British Council Award ref 279334808</dd>
+			<dt>Collaborators</dt>
+			<dd>Kustar/ MASDAR, UAE; FWC, Florida; EAD, UAE</dd>
+		</dl>
+            </div>
+            <hr />
+            <div class="container-md">
+                <h2>Abstract</h2>
+                <p> This paper describes the application of machine learning techniques to develop a state-of-the-art detection and prediction system for spatiotemporal events found within remote sensing data; specifically, Harmful Algal Bloom events (HABs). We propose an HAB detection system based on: a ground truth historical record of HAB events, a novel spatiotemporal datacube representation of each event (from MODIS and GEBCO bathymetry data) and a variety of machine learning architectures utilising state-of-the-art spatial and temporal analysis methods based on Convolutional Neural Networks (CNNs), Long Short-Term Memory (LSTM) components together with Random Forest and Support VectorMachine (SVM) classification methods. This work has focused specifically on the case study of the detection of Karenia Brevis Algae (K. brevis) HAB events within the coastal waters of Florida (over 2850 events from 2003 to 2018; an order of magnitude larger than any previousmachine learning detection study into HAB events). The development of multimodal spatiotemporal datacube data structures and associated novel machine learning methods give a unique architecture for the automatic detection of environmental events. Specifically, when applied to the detection of HAB events it gives a maximum detection accuracy of 91%and a Kappa coefficient of 0.81 for the Florida data considered. A HAB forecast system was also developed where a temporal subset of each datacube was used to predict the presence of a HAB in the future. This system was not significantly less accurate than the detection system being able to predict with 86% accuracy up to 8 days in the future. </p>
+            </div>
+            <hr />
+            <div class="container-md">
+                <h2 id="poster">Poster</h2>
+                <p><a href="poster.pdf"><img src="poster.png" alt="Poster" width=300 class="center" /></a></p>
+            </div>
+            <hr />
+            <div class="container-md">
+                <h2 id="downloads">Downloads</h2>
+                <ul>
+                    <li>Paper <a href="https://ieeexplore.ieee.org/abstract/document/9113293">[PDF]</a> <a href="https://arxiv.org/abs/1912.02305">[ArXiv]</a></li>
+                    <li>Supplementary <a href="poster.pdf">[Poster]</a></li>
+                </ul>
+            </div>
+            <div class="container-md">
+                <h2>Code (on Github)</h2>
+                <ul>
+                    <li><a href='https://github.com/csprh/extractData'>Matlab Based Code for DataCube Extraction</a> </li>
+                    <li><a href='https://github.com/csprh/modelHAB'>Python code for HAB classification</a> </li>
+                </ul>
+            </div>
+            <div class="container-md">
+                <h2>Citation</h2>
+                <pre class="citation">
+@article{hill2020habnet,
+  title={HABNet: Machine Learning, Remote Sensing-Based Detection of Harmful Algal Blooms},
+  author={Hill, Paul R and Kumar, Anurag and Temimi, Marouane and Bull, David R},
+  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+  volume={13},
+  pages={3229--3239},
+  year={2020},
+  publisher={IEEE}}</pre>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
