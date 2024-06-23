@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+<div class="page-container">
+    <div class="inner">
+        <div class="container">
+            <div class="row">
+                <div class="row vertical-align">
+                    <div class="col-md-10">
+                        <div class="title">
+                            <h1>{{ page.title }}</h1>
+                            <div class="container-sm">
+                                <!-- TODO: create for loop to loop over profiles -->
+                                <div class="row justify-content-md-center">
+                                    {% for authors in page.profiles %}
+                                    <div class="col-sm-auto">
+                                        <p><a href='{{ authors.url }}'>{{ authors.name }}</a></p>
+                                        <p>{{ authors.affiliation }}</p>
+                                    </div>
+                                    {% endfor %}
+                                    <div class="col-sm-auto">
+                                        <p><a href='http://www.bristol.ac.uk/engineering/people/paul-r-hill/index.html'>P.R. Hill</a></p>
+                                        <p>University of Bristol</p>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <p><a href='https://scholar.google.com/citations?user=srDQE6sAAAAJl'>A. Kumar</a></p>
+                                        <p>KUSTAR</p>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <p><a href='https://www.ku.ac.ae/academics/college-of-engineering/department/department-of-civil-infrastructure-and-environmental-engineering/people/dr-marouane-temimi'>M. Temimi</a></p>
+                                        <p>KUSTAR</p>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <p><a href='http://www.bristol.ac.uk/engineering/people/david-r-bull/index.html'>D.R. Bull</a></p>
+                                        <p>University of Bristol</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        <div class="col-md-2">
+            <p><a href='https://www.bristol.ac.uk'><img src="{{ site.baseurl }}/assets/images/uob-logo.svg" width="100%" height="20%" alt=""></a></p>
+            <p><a href='https://www.bristol.ac.uk/vision-institute'><img src="{{ site.baseurl }}/assets/images/bvilogo.svg" width="100%" height="20%" alt=""></a></p>
+                <p><a href='https://vilab.blogs.bristol.ac.uk'><img src="{{ site.baseurl }}/assets/images/VIL_logo.svg" width="100%" height="20%" alt=""></a></p>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-md">
+            <h2>About</h2>
+            <p>{{ page.about }}</p>
+
+            <dl>
+                {% if page.funders %}
+                    <dt>Funders</dt><dd>{{ page.funders }}</dd>
+                {% endif %}
+                {% if page.collaborators %}
+                    <dt>Collaborators</dt><dd>{{ page.collaborators }}</dd>
+                {% endif %}
+            </dl>
+        </div>
+        <hr />
+
+        <!-- Research content -->
+        <div class="container-md">
+            <h2>Abstract</h2>
+            <!-- Add the abstract of the paper here -->
+            <p>{{ content }}</p> 
+        </div>
+        <hr />
+
+        {% if page.poster %}
+        <div class="container-md">
+            <h2 id="poster">Poster</h2>
+            <p><a href="{{ page.poster }}"><img src="{{ page.poster_thumbnail }}" alt="Poster" width=300 class="center" /></a></p>
+        </div>
+        <hr />
+        {% endif %}
+
+        <div class="container-md">
+            <h2 id="downloads">Downloads</h2>
+            {% if page.supplementary %}
+            <ul>
+                <li>Paper <a href="{{ page.paper }}">[PDF]</a> <a href="{{ page.arxiv }}">[ArXiv]</a></li>
+                <li>Supplementary <a href="{{ page.supplementary }}">[Supp]</a></li>
+            </ul>
+            {% else %}
+            Paper <a href="{{ page.paper }}">[PDF]</a> <a href="{{ page.arxiv }}">[ArXiv]</a>
+            {% endif %}
+        </div>
+        <hr />
+
+        {% if page.github %}
+        <div class="container-md">
+            <h2>Code (on Github)</h2>
+            {{ page.github }}
+        </div>
+        <hr />
+        {% else %}
+        <div class="container-md">
+            <h2>Code (on Github)</h2>
+            <p>Code will be available soon.</p>
+        </div>
+        <hr />
+        {% endif %}
+
+        <div class="container-md">
+            <h2>Citation</h2>
+            <pre class="citation">{{ page.citation }}</pre>
+        </div>
+    </div>
+</div>

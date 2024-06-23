@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="PhD Student">
+    <meta name="author" content="Joanne Lin">
+    
+    <title>Feature Denoising for Low-Light Instance Segmentation using Weighted Non-Local Blocks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+    <!-- you should probably put some google analytics / meta bits and pieces
+        here : PRH 
+    <meta property="og:title" content="Paul Hill's Website"> etc.
+      <script async src="https://www.googletagmanager.com/gtag/js?id=??????????"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '??????????');
+    </script>
+        -->
+</head>
+
+
+<body id="page-top">
+    <div class="page-container">
+    <div class="inner">
+        <div class="container">
+            <div class="row">
+                <div class="row vertical-align">
+                    <div class="col-md-10">
+                        <div class="title">
+                            <h1>Feature Denoising for Low-Light Instance Segmentation using Weighted Non-Local Blocks</h1>
+                            <div class="container-sm">
+                                <!-- TODO: create for loop to loop over profiles -->
+                                <div class="row justify-content-md-center">
+                                    
+                                    <div class="col-sm-auto">
+                                        <p><a href='http://www.bristol.ac.uk/engineering/people/paul-r-hill/index.html'>P.R. Hill</a></p>
+                                        <p>University of Bristol</p>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <p><a href='https://scholar.google.com/citations?user=srDQE6sAAAAJl'>A. Kumar</a></p>
+                                        <p>KUSTAR</p>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <p><a href='https://www.ku.ac.ae/academics/college-of-engineering/department/department-of-civil-infrastructure-and-environmental-engineering/people/dr-marouane-temimi'>M. Temimi</a></p>
+                                        <p>KUSTAR</p>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <p><a href='http://www.bristol.ac.uk/engineering/people/david-r-bull/index.html'>D.R. Bull</a></p>
+                                        <p>University of Bristol</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        <div class="col-md-2">
+            <p><a href='https://www.bristol.ac.uk'><img src="/assets/images/uob-logo.svg" width="100%" height="20%" alt=""></a></p>
+            <p><a href='https://www.bristol.ac.uk/vision-institute'><img src="/assets/images/bvilogo.svg" width="100%" height="20%" alt=""></a></p>
+                <p><a href='https://vilab.blogs.bristol.ac.uk'><img src="/assets/images/VIL_logo.svg" width="100%" height="20%" alt=""></a></p>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-md">
+            <h2>About</h2>
+            <p>This project proposed a novel generic block for denoising the feature maps of low-light images, which can be easily integrated into existing instance segmentation frameworks.</p>
+
+            <dl>
+                
+                    <dt>Funders</dt><dd>MyWorld Strength in Places</dd>
+                
+                
+            </dl>
+        </div>
+        <hr />
+
+        <!-- Research content -->
+        <div class="container-md">
+            <h2>Abstract</h2>
+            <!-- Add the abstract of the paper here -->
+            <p><p>Instance segmentation for low-light imagery remains largely unexplored due to the challenges imposed by such conditions, for example shot noise due to low photon count, color distortions and reduced contrast. In this paper, we propose an end-to-end solution to address this challenging task. Based on Mask R-CNN, our proposed method implements weighted non-local (NL) blocks in the feature extractor. This integration enables an inherent denoising process at the feature level. As a result, our method eliminates the need for aligned ground truth images during training, thus supporting training on real-world low-light datasets. We introduce additional learnable weights at each layer in order to enhance the network’s adaptability to real-world noise characteristics, which affect different feature scales in different ways.</p>
+
+<p>Experimental results show that the proposed method outperforms the pretrained Mask R-CNN with an Average Precision (AP) improvement of +10.0, with the introduction of weighted NL Blocks further enhancing AP by +1.0.</p>
+</p> 
+        </div>
+        <hr />
+
+        
+
+        <div class="container-md">
+            <h2 id="downloads">Downloads</h2>
+            
+            Paper <a href="https://arxiv.org/abs/2402.18307">[PDF]</a> <a href="https://arxiv.org/abs/2402.18307">[ArXiv]</a>
+            
+        </div>
+        <hr />
+
+        
+        <div class="container-md">
+            <h2>Code (on Github)</h2>
+            <p>Code will be available soon.</p>
+        </div>
+        <hr />
+        
+
+        <div class="container-md">
+            <h2>Citation</h2>
+            <pre class="citation">@article{hill2020habnet,
+    title={HABNet: Machine Learning, Remote Sensing-Based Detection of Harmful Algal Blooms},
+    author={Hill, Paul R and Kumar, Anurag and Temimi, Marouane and Bull, David R},
+    journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+    volume={13},
+    pages={3229--3239},
+    year={2020},
+    publisher={IEEE}}
+</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 title: Joanne Lin Research
 author: Joanne Lin
 description: PhD Student
-portrait: assets/images/portrait.jpg
+photo: assets/images/portrait.jpg
 address:
   line_1: 1.23, 1 Cathedral Square, University of Bristol
   line 2: Bristol BS1 5DD, UK
@@ -12,6 +12,8 @@ socials:
   github: https://github.com/JoanneLin168
   bris_research: https://research-information.bris.ac.uk/en/persons/joanne-lin
 cv: assets/files/cv.pdf
+interests: [Computer Vision, Machine Learning, Deep Learning, Machine Perception, Image and Video Enhancement]
+projects: [Low-Light Images and Videos] # Too lazy to set up properly, so ensure that all posts have these
 
 url: ""
 baseurl: ""
