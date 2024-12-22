@@ -12,7 +12,7 @@ socials:
   github: https://github.com/JoanneLin168
   bris_research: https://research-information.bris.ac.uk/en/persons/joanne-lin
 cv: assets/files/cv.pdf
-interests: [Computer Vision, Machine Learning, Deep Learning, Machine Perception, Image and Video Enhancement]
+interests: [Computer Vision, Machine Perception, Image and Video Enhancement, Signal Processing, Deep Learning, Machine Learning]
 projects: [Low-Light Images and Videos] # Too lazy to set up properly, so ensure that all posts have these
 
 url: ""

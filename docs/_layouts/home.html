@@ -133,7 +133,7 @@ layout: default
                 {% assign pdfUrl = post.journal.paper | default: post.journal.arxiv %}
                 <div class="publication">
                     <a>{{ post.featured_str }}</a>
-                    <a href="{{ pdfUrl }}">PDF</a>
+                    <a href="{{ pdfUrl }}">[PDF]</a>
             {% endfor %}
         </div>
         <hr />
