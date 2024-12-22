@@ -93,7 +93,7 @@ layout: default
         <div class="container-md">
             <h2 id="news">News & Activities</h2>
             <ul>
-                <li>Feb 2024: Uploaded paper "Feature Denoising for Low-Light Instance Segmentation using Weighted Non-Local Blocks" to arXiv</li>
+                <li>Dec 2024: Paper "Multi-Scale Denoising in the Feature Space for Low-Light Instance Segmentation" was accepted to ICASSP 2025</li>
             </ul>
         </div>
         <hr />
@@ -130,7 +130,9 @@ layout: default
             <h5>Selected papers:</h5>
             {% for post in site.posts %}
                 {% if post.featured %}
-                    <b>{{ post.title }}</b><p>{{ post.authors | jsonify }}</p>
+                    <!-- <b>{{ post.title }}</b><p>{{ post.authors | jsonify }}</p> -->
+                    <b><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></b>
+                    {% for author in post.authors}<a>{{ author }}, </a>{% endfor %}
                 {% endif %}
             {% endfor %}
         </div>
