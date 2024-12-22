@@ -7,6 +7,8 @@ source "https://rubygems.org"
 #     bundle exec jekyll serve
 #
 
+# if you have issues, likely because you have wrong ruby. need ruby < v3.2
+
 # If you have any plugins, put them here!
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem "github-pages", "~> 219", group: :jekyll_plugins

@@ -105,11 +105,10 @@ layout: default
             <div class="researchlist">
                 {% for project in site.projects %}
                     <h5>{{ project }}</h5>
+                    {% assign projectPosts = site.posts | where: 'project', project %}
                     <ul>
-                        {% for post in site.posts %}
-                            {% if post.project == project %}
-                                <li><a href="{{ post.url }}">{{ post.alt_title }}</a></li>
-                            {% endif %}
+                        {% for post in projectPosts %}
+                            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                         {% endfor %}
                     </ul>
                 {% endfor %}
@@ -128,12 +127,9 @@ layout: default
             </ul>
 
             <h5>Selected papers:</h5>
-            {% for post in site.posts %}
-                {% if post.featured %}
-                    <!-- <b>{{ post.title }}</b><p>{{ post.authors | jsonify }}</p> -->
-                    <b><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></b>
-                    {% for author in post.authors}<a>{{ author }}, </a>{% endfor %}
-                {% endif %}
+            {% assign featuredPosts = site.posts | where: 'featured', 'true' %}
+            {% for post in featuredPosts %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
         </div>
         <hr />

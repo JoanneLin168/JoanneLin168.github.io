@@ -19,10 +19,10 @@ url: ""
 baseurl: ""
 
 # Plugins
-# plugins:
-#   - jekyll-paginate
-#   - jekyll-sitemap
-#   - jekyll-feed
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
 
 # Sass
 sass:
