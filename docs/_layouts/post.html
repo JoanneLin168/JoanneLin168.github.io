@@ -13,28 +13,12 @@ layout: default
                             <div class="container-sm">
                                 <!-- TODO: create for loop to loop over profiles -->
                                 <div class="row justify-content-md-center">
-                                    {% for authors in page.profiles %}
+                                    {% for i in (0..page.authors.names.size) %}
                                     <div class="col-sm-auto">
-                                        <p><a href='{{ authors.url }}'>{{ authors.name }}</a></p>
-                                        <p>{{ authors.affiliation }}</p>
+                                        <p><a href="{{ page.authors.urls[i] }}">{{ page.authors.names[i] }}</a></p>
+                                        <p>{{ page.authors.affiliation[i] }}</p>
                                     </div>
                                     {% endfor %}
-                                    <div class="col-sm-auto">
-                                        <p><a href='http://www.bristol.ac.uk/engineering/people/paul-r-hill/index.html'>P.R. Hill</a></p>
-                                        <p>University of Bristol</p>
-                                    </div>
-                                    <div class="col-sm-auto">
-                                        <p><a href='https://scholar.google.com/citations?user=srDQE6sAAAAJl'>A. Kumar</a></p>
-                                        <p>KUSTAR</p>
-                                    </div>
-                                    <div class="col-sm-auto">
-                                        <p><a href='https://www.ku.ac.ae/academics/college-of-engineering/department/department-of-civil-infrastructure-and-environmental-engineering/people/dr-marouane-temimi'>M. Temimi</a></p>
-                                        <p>KUSTAR</p>
-                                    </div>
-                                    <div class="col-sm-auto">
-                                        <p><a href='http://www.bristol.ac.uk/engineering/people/david-r-bull/index.html'>D.R. Bull</a></p>
-                                        <p>University of Bristol</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -82,13 +66,15 @@ layout: default
 
         <div class="container-md">
             <h2 id="downloads">Downloads</h2>
-            {% if page.supplementary %}
+            {% if page.publication.supplementary %}
             <ul>
-                <li>Paper <a href="{{ page.paper }}">[PDF]</a> <a href="{{ page.arxiv }}">[ArXiv]</a></li>
-                <li>Supplementary <a href="{{ page.supplementary }}">[Supp]</a></li>
+                <li>Paper <a href="{{ page.publication.paper }}">[PDF]</a> <a href="{{ page.publication.arxiv }}">[ArXiv]</a></li>
+                <li>Supplementary <a href="{{ page.publication.supplementary }}">[Supp]</a></li>
             </ul>
+            {% elsif page.publication.paper %}
+            Paper <a href="{{ page.publication.paper }}">[PDF]</a> <a href="{{ page.publication.arxiv }}">[ArXiv]</a>
             {% else %}
-            Paper <a href="{{ page.paper }}">[PDF]</a> <a href="{{ page.arxiv }}">[ArXiv]</a>
+            <a href="{{ page.publication.arxiv }}">[ArXiv]</a>
             {% endif %}
         </div>
         <hr />
