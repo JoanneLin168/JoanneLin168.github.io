@@ -45,13 +45,30 @@ layout: default
                     <dt>Collaborators</dt><dd>{{ page.collaborators }}</dd>
                 {% endif %}
             </dl>
+
         </div>
         <hr />
 
         <!-- Research content -->
         <div class="container-md">
+            <h2 id="links">Links</h2>
+            {% if page.publication.paper %}
+            <a href="{{ page.publication.paper }}">[PDF]</a>
+            {% endif %}
+            {% if page.publication.arxiv %}
+            <a href="{{ page.publication.arxiv }}">[ArXiv]</a>
+            {% endif %}
+            {% if page.publication.supplementary %}
+            <a href="{{ page.publication.supplementary }}">[Supp]</a>
+            {% endif %}
+            {% if page.github %}
+            <a href="{{ page.github }}">[Code]</a>
+            {% endif %}
+        </div>
+        <hr />
+
+        <div class="container-md">
             <h2>Abstract</h2>
-            <!-- Add the abstract of the paper here -->
             <p>{{ content }}</p> 
         </div>
         <hr />
@@ -59,42 +76,15 @@ layout: default
         {% if page.poster %}
         <div class="container-md">
             <h2 id="poster">Poster</h2>
-            <p><a href="{{ page.poster }}"><img src="{{ page.poster_thumbnail }}" alt="Poster" width=300 class="center" /></a></p>
-        </div>
-        <hr />
-        {% endif %}
-
-        <div class="container-md">
-            <h2 id="downloads">Downloads</h2>
-            {% if page.publication.supplementary %}
-            <ul>
-                <li>Paper <a href="{{ page.publication.paper }}">[PDF]</a> <a href="{{ page.publication.arxiv }}">[ArXiv]</a></li>
-                <li>Supplementary <a href="{{ page.publication.supplementary }}">[Supp]</a></li>
-            </ul>
-            {% elsif page.publication.paper %}
-            Paper <a href="{{ page.publication.paper }}">[PDF]</a> <a href="{{ page.publication.arxiv }}">[ArXiv]</a>
-            {% else %}
-            <a href="{{ page.publication.arxiv }}">[ArXiv]</a>
-            {% endif %}
-        </div>
-        <hr />
-
-        {% if page.github %}
-        <div class="container-md">
-            <h2>Code (on Github)</h2>
-            {{ page.github }}
-        </div>
-        <hr />
-        {% else %}
-        <div class="container-md">
-            <h2>Code (on Github)</h2>
-            <p>Code will be available soon.</p>
+            <p><a href="{{ site.baseurl }}/{{ page.poster }}"><img src="{{ site.baseurl }}/{{ page.poster_thumbnail }}" alt="Poster" width=300 class="center"/></a></p>
+            <p>(Click on the image to view the poster in higher quality)</p>
         </div>
         <hr />
         {% endif %}
 
         <div class="container-md">
             <h2>Citation</h2>
+            <p>If you use our work in your research, please cite using the following BibTeX entry:</p>
             <pre class="citation">{{ page.citation }}</pre>
         </div>
     </div>
