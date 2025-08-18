@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="PhD Student">
+    <meta name="author" content="Joanne Lin">
+    
+    <title>Towards a General-Purpose Zero-Shot Synthetic Low-Light Image and Video Pipeline</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+    <!-- you should probably put some google analytics / meta bits and pieces
+        here : PRH 
+    <meta property="og:title" content="Paul Hill's Website"> etc.
+      <script async src="https://www.googletagmanager.com/gtag/js?id=??????????"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '??????????');
+    </script>
+        -->
+</head>
+
+
+<body id="page-top">
+    <div class="page-container">
+    <div class="inner">
+        <div class="container">
+            <div class="row">
+                <div class="row vertical-align">
+                    <div class="col-md-10">
+                        <div class="title">
+                            <h1>Towards a General-Purpose Zero-Shot Synthetic Low-Light Image and Video Pipeline</h1>
+                            <div class="container-sm">
+                                <!-- TODO: create for loop to loop over profiles -->
+                                <div class="row justify-content-md-center">
+                                    
+                                    <div class="col-sm-auto">
+                                        <p><a href="https://joannelin168.github.io/">J. Lin</a></p>
+                                        <p></p>
+                                    </div>
+                                    
+                                    <div class="col-sm-auto">
+                                        <p><a href="https://research-information.bris.ac.uk/en/persons/crispian-morris">C. Morris</a></p>
+                                        <p></p>
+                                    </div>
+                                    
+                                    <div class="col-sm-auto">
+                                        <p><a href="https://lrr-rachel.github.io/">R. Lin</a></p>
+                                        <p></p>
+                                    </div>
+                                    
+                                    <div class="col-sm-auto">
+                                        <p><a href="https://fan-aaron-zhang.github.io/">F. Zhang</a></p>
+                                        <p></p>
+                                    </div>
+                                    
+                                    <div class="col-sm-auto">
+                                        <p><a href="https://david-bull.github.io/">D. Bull</a></p>
+                                        <p></p>
+                                    </div>
+                                    
+                                    <div class="col-sm-auto">
+                                        <p><a href="https://pui-nantheera.github.io/">N. Anantrasirichai</a></p>
+                                        <p></p>
+                                    </div>
+                                    
+                                    <div class="col-sm-auto">
+                                        <p><a href=""></a></p>
+                                        <p></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        <div class="col-md-2">
+            <p><a href='https://www.bristol.ac.uk'><img src="/assets/images/uob-logo.svg" width="100%" height="20%" alt=""></a></p>
+            <p><a href='https://www.bristol.ac.uk/vision-institute'><img src="/assets/images/bvilogo.svg" width="100%" height="20%" alt=""></a></p>
+                <p><a href='https://vilab.blogs.bristol.ac.uk'><img src="/assets/images/VIL_logo.svg" width="100%" height="20%" alt=""></a></p>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-md">
+            <h2>About</h2>
+            <p>We propose a zero-shot synthetic low-light image/video pipeline without the need for extra camera metadata for general-purpose applications.</p>
+
+            <dl>
+                
+                    <dt>Funders</dt><dd>MyWorld Strength in Places, British Broadcasting Coorporation (BBC)</dd>
+                
+                
+            </dl>
+
+        </div>
+        <hr />
+
+        <!-- Research content -->
+        <div class="container-md">
+            <h2 id="links">Links</h2>
+            
+            
+            <a href="https://arxiv.org/abs/2504.12169">[ArXiv]</a>
+            
+            
+            
+            <a href="https://github.com/JoanneLin168/degradation-estimation-network">[Code]</a>
+            
+        </div>
+        <hr />
+
+        <div class="container-md">
+            <h2>Abstract</h2>
+            <p><p>Low-light conditions pose significant challenges for both human and machine annotation. This in turn has led to a lack of research into machine understanding for low-light images and (in particular) videos. A common approach is to apply annotations obtained from high quality datasets to synthetically created low light versions. In addition, these approaches are often limited through the use of unrealistic noise models. In this paper, we propose a new Degradation Estimation Network (DEN), which synthetically generates realistic standard RGB (sRGB) noise without the requirement for camera metadata. This is achieved by estimating the parameters of physics-informed noise distributions, trained in a self-supervised manner. This zero-shot approach allows our method to generate synthetic noisy content with a diverse range of realistic noise characteristics, unlike other methods which focus on recreating the noise characteristics of the training data. We evaluate our proposed synthetic pipeline using various methods trained on its synthetic data for typical low-light tasks including synthetic noise replication, video enhancement, and object detection, showing improvements of up to 24% KLD, 21% LPIPS, and 62% AP_{50-95}, respectively.</p>
+</p> 
+        </div>
+        <hr />
+
+        
+
+        <div class="container-md">
+            <h2>Citation</h2>
+            <p>If you use our work in your research, please cite using the following BibTeX entry:</p>
+            <pre class="citation">@article{lin2025den,
+    title={Towards a General-Purpose Zero-Shot Synthetic Low-Light Image and Video Pipeline},
+    author={Lin, Joanne and Morris, Crispian, and Lin, Ruirui and Zhang, Fan and Bull, David and Anatrasirichai, Nantheera},
+    year={2025},
+    publisher={arXiv}}
+</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

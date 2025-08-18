@@ -6,14 +6,18 @@ about: Add summary here
 authors:
   names:
   institute:
-  websites:
+  urls:
 funders: 
 collaborators: 
 poster:
 poster_thumbnail:
-paper: 
-arxiv: 
-# supplementary: # Comment out if not available
+publication:
+    paper:
+    arxiv:
+    journal:
+    journal_short:
+    year:
+    supplementary:
 github:
 citation: |
     This is a multiline YAML frontmatter.

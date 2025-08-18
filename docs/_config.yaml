@@ -14,6 +14,7 @@ socials:
 cv: assets/files/cv.pdf
 interests: [Computer Vision, Machine Perception, Image and Video Enhancement, Signal Processing, Deep Learning, Machine Learning]
 projects: [Low-Light Images and Videos] # Too lazy to set up properly, so ensure that all posts have these
+future: true # Allows for "future" posts to be displayed
 
 url: ""
 baseurl: ""
