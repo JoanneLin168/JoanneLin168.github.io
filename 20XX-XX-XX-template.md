@@ -1,7 +1,7 @@
 ---
 title: Title
-alt_title: Alternative Title # To be displayed in Projects section in index.html
-project: Project Name
+alt_title: Alternative Title # might be outdated
+categories: [Low-Light]
 about: Add summary here
 authors:
   names:

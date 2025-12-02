@@ -84,9 +84,11 @@ layout: default
         <!-- Publications Section -->
         <div class="container-md">
             <h2>Publications</h2>
+            <h5>Featured Publications</h5>
             <div class="publications-wrapper">
                 <div id="publications-container" class="publications-grid">
-                    {% for post in site.posts %}
+                    {% assign featuredPosts = site.posts | where: 'featured', 'true' %}
+                    {% for post in featuredPosts %}
                         {% assign pdfUrl = post.publication.paper | default: post.publication.arxiv %}
                         <div class="publication-card" data-publication-item>
                             <a href="{{ post.url }}">
@@ -198,7 +200,31 @@ layout: default
                 })();
             </script>
 
-            
+            <h5>All Publications</h5>
+            <ul class="publications-list">
+            {% for post in site.posts %}
+                {% assign pdfUrl = post.publication.paper | default: post.publication.arxiv %}
+                <li class="publication-item">
+                    <span class="pub-date">
+                        {{ post.date | date: "%b %Y" }}:
+                    </span>
+                    <a class="pub-title" href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+
+                    <!-- <span class="pub-links">
+                        {% if pdfUrl %}
+                            <a href="{{ pdfUrl }}" class="pub-link"><b>[PDF]</b></a>
+                        {% endif %}
+                        {% if post.github %}
+                            <a href="{{ post.github }}" class="pub-link"><b>[Code]</b></a>
+                        {% endif %}
+                    </span> -->
+                </li>
+            {% endfor %}
+            </ul>
+
+            <hr />
             Also check out my Google Scholar profile and university site.
             <ul>
                 <li><a href="{{ site.socials.google_scholar }}">Google Scholar</a></li>
