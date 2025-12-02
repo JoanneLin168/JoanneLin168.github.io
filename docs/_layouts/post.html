@@ -5,67 +5,73 @@ layout: default
 <div class="page-container">
     <div class="inner">
         <div class="container">
-            <div class="row">
-                <div class="row vertical-align">
-                    <div class="col-md-10">
-                        <div class="title">
-                            <h1>{{ page.title }}</h1>
-                            <div class="container-sm">
-                                <!-- TODO: create for loop to loop over profiles -->
-                                <div class="row justify-content-md-center">
-                                    {% for i in (0..page.authors.names.size) %}
-                                    <div class="col-sm-auto">
-                                        <p><a href="{{ page.authors.urls[i] }}">{{ page.authors.names[i] }}</a></p>
-                                        <p>{{ page.authors.affiliation[i] }}</p>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
+            <div class="title">
+                <h1>{{ page.title }}</h1>
+                <div class="container-sm">
+                    <div class="row justify-content-md-center">
+                        {% for i in (0..page.authors.names.size) %}
+                        <div class="col-sm-auto">
+                            <p><a href="{{ page.authors.urls[i] }}">{{ page.authors.names[i] }}</a></p>
+                            <p>{{ page.authors.affiliation[i] }}</p>
                         </div>
-                    </div>
-
-        <div class="col-md-2">
-            <p><a href='https://www.bristol.ac.uk'><img src="{{ site.baseurl }}/assets/images/uob-logo.svg" width="100%" height="20%" alt=""></a></p>
-            <p><a href='https://www.bristol.ac.uk/vision-institute'><img src="{{ site.baseurl }}/assets/images/bvilogo.svg" width="100%" height="20%" alt=""></a></p>
-                <p><a href='https://vilab.blogs.bristol.ac.uk'><img src="{{ site.baseurl }}/assets/images/VIL_logo.svg" width="100%" height="20%" alt=""></a></p>
-            
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-md">
-            <h2>About</h2>
-            <p>{{ page.about }}</p>
 
-            <dl>
+        <!-- Funders & Collaborators Section -->
+        <div class="container-sm mt-4">
+            <div class="row justify-content-md-center">
                 {% if page.funders %}
-                    <dt>Funders</dt><dd>{{ page.funders }}</dd>
+                <div class="col-sm-auto text-center">
+                    <p><b>Funders:</b> {{ page.funders }}</p>
+                </div>
                 {% endif %}
                 {% if page.collaborators %}
-                    <dt>Collaborators</dt><dd>{{ page.collaborators }}</dd>
+                <div class="col-sm-auto text-center">
+                    <p><b>Collaborators:</b> {{ page.collaborators }}</p>
+                </div>
                 {% endif %}
-            </dl>
-
+            </div>
         </div>
-        <hr />
 
         <!-- Research content -->
-        <div class="container-md">
-            <h2 id="links">Links</h2>
-            {% if page.publication.paper %}
-            <a href="{{ page.publication.paper }}">[PDF]</a>
-            {% endif %}
-            {% if page.publication.arxiv %}
-            <a href="{{ page.publication.arxiv }}">[ArXiv]</a>
-            {% endif %}
-            {% if page.publication.supplementary %}
-            <a href="{{ page.publication.supplementary }}">[Supp]</a>
-            {% endif %}
-            {% if page.github %}
-            <a href="{{ page.github }}">[Code]</a>
-            {% endif %}
+        <br />
+        <div class="container-md" style="width: 80%">
+            <div class="d-flex justify-content-evenly flex-wrap"> <!-- flex container with spacing -->
+                {% if page.publication.paper %}
+                <a href="{{ page.publication.paper }}" class="btn btn-dark btn-lg">
+                    <i class="bi bi-file-earmark-pdf"></i> PDF
+                </a>
+                {% endif %}
+                
+                {% if page.publication.arxiv %}
+                <a href="{{ page.publication.arxiv }}" class="btn btn-dark btn-lg">
+                    <i class="bi bi-file-earmark-pdf"></i> Supplementary
+                </a>
+                {% endif %}
+                
+                {% if page.publication.arxiv %}
+                <a href="{{ page.publication.arxiv }}" class="btn btn-dark btn-lg">
+                    <i class="ai ai-arxiv"></i> ArXiv
+                </a>
+                {% endif %}
+                
+                {% if page.github %}
+                <a href="{{ page.github }}" class="btn btn-dark btn-lg">
+                    <i class="bi bi-github"></i> Code
+                </a>
+                {% endif %}
+            </div>
         </div>
         <hr />
+
+        <div class="container-md">
+            {% if page.thumbnail %}
+            <img src="{{ site.baseurl }}/{{ page.thumbnail }}" alt="Thumbnail" class="center"/>
+            {% endif %}
+        </div>
 
         <div class="container-md">
             <h2>Abstract</h2>

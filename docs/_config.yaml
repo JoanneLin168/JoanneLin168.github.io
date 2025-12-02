@@ -12,27 +12,28 @@ socials:
   github: https://github.com/JoanneLin168
   bris_research: https://research-information.bris.ac.uk/en/persons/joanne-lin
 cv: assets/files/cv.pdf
-interests: [Computer Vision, Machine Perception, Image and Video Enhancement, Signal Processing, Deep Learning, Machine Learning]
-projects: [Low-Light Images and Videos] # Too lazy to set up properly, so ensure that all posts have these
+interests: [Computer Vision, Machine Perception, Image and Video Processing, Deep Learning, Machine Learning]
+# projects: [Low-Light Images and Videos] # Too lazy to set up properly, so ensure that all posts have these
+permalink: /:categories/:title/
 future: true # Allows for "future" posts to be displayed
 
 url: ""
 baseurl: ""
 
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
+# # Plugins
+# plugins:
+#   - jekyll-paginate
+#   - jekyll-sitemap
+#   - jekyll-feed
 
 # Sass
 sass:
   sass_dir: _sass
   style: compressed
     
-# Pagination 
-paginate: 6
-paginate_path: /page:num/
+# # Pagination 
+# paginate: 6
+# paginate_path: /page:num/
     
 # Other
 markdown: kramdown
