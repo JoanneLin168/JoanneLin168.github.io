@@ -1,3 +1,16 @@
+:root {
+    --pubcard-bg: #ffffff;          /* pure white for light mode */
+    --pubcard-bg-secondary: #f3f3f3;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Publication card colors (DARK MODE) */
+        --pubcard-bg: #1e2630;           /* dark grey w/ soft blue tint */
+        --pubcard-bg-secondary: #13151b; /* for image background */
+    }
+}
+
 /* --- Publications Grid --- */
 .publications-wrapper {
     margin-top: 2rem;
@@ -29,7 +42,7 @@
 
 .publication-card {
     width: 100%;                            /* Fill the grid column */
-    background: #fff;
+    background: var(--pubcard-bg);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -50,7 +63,7 @@
     width: 100%;
     height: 150px;              /* Fixed height ensures uniform cards */
     overflow: hidden;
-    background: #f3f3f3;
+    background: var(--pubcard-bg-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +79,7 @@
 /* Placeholder style */
 .publication-image-placeholder {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--pubcard-bg-secondary);
 }
 
 /* --- Content Area --- */
@@ -86,7 +99,7 @@
 
 .pub-link {
     text-decoration: none;
-    color: #0077cc;
+    color: var(--primary-color);
     font-size: 0.9rem;
 }
 
@@ -105,15 +118,15 @@
 
 .pagination-btn {
     border: none;
-    background: #0077cc;
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-primary);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .pagination-btn:disabled {
-    background: #ccc;
+    background: var(--border-color);
     cursor: not-allowed;
 }
 

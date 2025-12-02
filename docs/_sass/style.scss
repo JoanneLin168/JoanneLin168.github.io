@@ -1,3 +1,4 @@
+
 :root {
     /* Primary Color Family (Authority & Trust) */
     --primary-color: #1e466b; 
@@ -39,6 +40,40 @@ body {
     min-width: 320px;
     line-height: 1.6;
     font-size: 16px;
+}
+
+/* Dark Mode (Automatic: based on system preference) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Primary Color Family (Authority & Trust) */
+        --primary-color: #73a7d8; 
+        --primary-hover: #9ac3e8;
+
+        /* Accent Color (Highlight & Distinction) */
+        --accent-color: #e49db2; /* softened rose tone */
+
+        /* Text Color Family */
+        --text-primary: #f4f4f4;
+        --text-secondary: #cfcfcf;
+        --text-light: #9d9d9d;
+
+        /* Background Color Family */
+        --bg-primary: #1a1c1f;
+        --bg-secondary: #22252a;
+        --bg-accent: #2d3137;
+
+        /* Utility & Effects */
+        --border-color: #3d434a;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.55);
+        --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.65);
+
+        /* Gradient background for body */
+    }
+
+    body {
+        background: linear-gradient(135deg, #1c1f22 0%, #111315 100%);
+    }
 }
 
 /* Typography */
