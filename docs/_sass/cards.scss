@@ -1,0 +1,128 @@
+/* --- Publications Grid --- */
+.publications-wrapper {
+    margin-top: 2rem;
+}
+
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 cards */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+    .publications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 640px) {
+    .publications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.publication-card {
+    width: 100%;                            /* Fill the grid column */
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent; /* Add a transparent border to prevent content shift */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.publication-card:hover {
+    border-color: var(--primary-hover); 
+    /* Slightly deepen the shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Image Container --- */
+.publication-image {
+    width: 100%;
+    height: 150px;              /* Fixed height ensures uniform cards */
+    overflow: hidden;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.publication-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;          /* contain vs cover */
+    object-position: center;
+}
+
+/* Placeholder style */
+.publication-image-placeholder {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Content Area --- */
+.publication-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.publication-title {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* --- Links --- */
+.publication-links {
+    margin-top: auto;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.pub-link {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 0.9rem;
+}
+
+.pub-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Pagination --- */
+.pagination-controls {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination-btn {
+    border: none;
+    background: #0077cc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#page-info {
+    font-size: 0.9rem;
+}
