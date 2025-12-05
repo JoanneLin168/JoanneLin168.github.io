@@ -72,11 +72,13 @@ layout: default
         <div class="container-md">
             <h2 id="news">News & Activities</h2>
             <ul>
-                <li><b>Oct 2025</b>: Presented "Towards a General-Purpose Zero-Shot Synthetic Low-Light Image and Video Pipeline" at ACMMM McGE'25 Workshop</li>
-                <li><b>Aug 2025</b>: Paper "Towards a General-Purpose Zero-Shot Synthetic Low-Light Image and Video Pipeline" was accepted to ACMMM McGE'25 Workshop</li>
-                <li><b>Apr 2025</b>: Presented "Multi-Scale Denoising in the Feature Space for Low-Light Instance Segmentation" at ICASSP 2025</li>
-                <li><b>Feb 2025</b>: Paper "Enhancing low-light instance segmentation through feature-level denoising" was accepted to SPIE Machine Learning from Challenging Data 2025</li>
-                <li><b>Dec 2024</b>: Paper "Multi-Scale Denoising in the Feature Space for Low-Light Instance Segmentation" was accepted to ICASSP 2025</li>
+                <li><b>Oct 2025</b>: Presented "Towards a General-Purpose Zero-Shot Synthetic Low-Light Image and Video Pipeline" at <i>ACMMM McGE'25 Workshop</i></li>
+                <li><b>Oct 2025</b>: Demonstration of real-time object tracking in low-light videos at <a href="https://techspark.co/btfplus-2/"><i>BTF+</i></a></li>
+                <li><b>Sep 2025</b>: Demonstration of real-time object tracking in low-light videos at <a href="https://futuresnight.co.uk/events/discovery-day-bristol/"><i>FUTURES Discovery Day</i></a></li>
+                <li><b>Aug 2025</b>: Paper "Towards a General-Purpose Zero-Shot Synthetic Low-Light Image and Video Pipeline" was accepted to <i>ACMMM McGE'25 Workshop</i></li>
+                <li><b>Apr 2025</b>: Presented "Multi-Scale Denoising in the Feature Space for Low-Light Instance Segmentation" at <i>ICASSP 2025</i></li>
+                <li><b>Feb 2025</b>: Paper "Enhancing low-light instance segmentation through feature-level denoising" was accepted to <i>SPIE Machine Learning from Challenging Data 2025</i></li>
+                <li><b>Dec 2024</b>: Paper "Multi-Scale Denoising in the Feature Space for Low-Light Instance Segmentation" was accepted to <i>ICASSP 2025</i></li>
             </ul>
         </div>
         <hr />
@@ -90,6 +92,12 @@ layout: default
                     {% assign featuredPosts = site.posts | where: 'featured', 'true' %}
                     {% for post in featuredPosts %}
                         {% assign pdfUrl = post.publication.paper | default: post.publication.arxiv %}
+                        {% assign year = post.date | date: "%y" %}
+                        {% if post.publication.journal != "arXiv" %}
+                            {% assign journalShort = post.publication.journal_short | append: "'" | append: year %}
+                        {% else %}
+                            {% assign journalShort = post.publication.journal_short %}
+                        {% endif %}
                         <div class="publication-card" data-publication-item>
                             <a href="{{ post.url }}">
                                 {% if post.thumbnail %}
@@ -109,6 +117,9 @@ layout: default
                                         {% endif %}
                                         {% if post.github %}
                                         <a href="{{ post.github }}" target="_blank" rel="noopener" class="pub-link">Code</a>
+                                        {% endif %}
+                                        {% if post.publication.journal_short %}
+                                        <span class="pub-journal">{{ journalShort }}</span>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -204,12 +215,18 @@ layout: default
             <ul class="publications-list">
             {% for post in site.posts %}
                 {% assign pdfUrl = post.publication.paper | default: post.publication.arxiv %}
+                {% assign year = post.date | date: "%y" %}
+                {% if post.publication.journal != "arXiv" %}
+                    {% assign journalShort = post.publication.journal_short | append: "'" | append: year %}
+                {% else %}
+                    {% assign journalShort = post.publication.journal_short %}
+                {% endif %}
                 <li class="publication-item">
                     <span class="pub-date">
                         {{ post.date | date: "%b %Y" }}:
                     </span>
                     <a class="pub-title" href="{{ post.url }}">
-                        {{ post.title }}
+                        <b>[{{ journalShort }}]</b> {{ post.title }}
                     </a>
 
                     <!-- <span class="pub-links">

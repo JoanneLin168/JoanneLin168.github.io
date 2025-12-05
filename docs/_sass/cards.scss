@@ -93,9 +93,26 @@
 .publication-title {
     margin: 0;
     font-size: 1rem;
+    padding-bottom: 10px; /* creates space between title and line */
+}
+
+.publication-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;      /* length of the line – adjust as needed */
+    height: 2px;      /* line thickness */
+    background-color: var(--border-color); /* color of the line */
 }
 
 /* --- Links --- */
+.publication-links {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-left: -0.8rem;
+}
 
 .pub-link {
     text-decoration: none;
@@ -105,6 +122,14 @@
 
 .pub-link:hover {
     text-decoration: underline;
+}
+
+.pub-journal {
+    margin-left: auto; /* pushes to right */
+    color: var(--text-light);       /* grey */
+    font-style: italic;
+    font-size: 0.85rem;
+    pointer-events: none; /* ensures it's not clickable */
 }
 
 /* --- Pagination --- */
