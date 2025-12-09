@@ -67,17 +67,29 @@ layout: default
         </div>
         <hr />
 
+        {% if page.thumbnail %}
         <div class="container-md">
-            {% if page.thumbnail %}
             <img src="{{ site.baseurl }}/{{ page.thumbnail }}" alt="Thumbnail" class="center"/>
-            {% endif %}
         </div>
+        {% endif %}
 
         <div class="container-md">
             <h2>Abstract</h2>
             <p>{{ content }}</p> 
         </div>
         <hr />
+
+        {% if page.video %}
+        <div class="container-md">
+            <h2>Video</h2>
+            <div class="video-container">
+                <video width="100%" autoplay muted loop playsinline>
+                    <source src="{{ site.baseurl }}/{{ page.video }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <hr />
+        {% endif %}
 
         {% if page.poster %}
         <div class="container-md">

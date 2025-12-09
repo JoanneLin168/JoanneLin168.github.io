@@ -12,6 +12,7 @@ collaborators:
 thumbnail: 
 poster:
 poster_thumbnail:
+video:
 publication:
     paper:
     arxiv:
