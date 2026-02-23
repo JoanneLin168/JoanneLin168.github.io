@@ -20,6 +20,7 @@ publication:
     journal:
     journal_short:
     year:
+    journal_display:  # making this separate key in case it is Oral/Highlight/Workshop paper
     supplementary:
 github:
 citation: |
