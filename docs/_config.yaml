@@ -14,7 +14,14 @@ socials:
 cv: assets/files/cv.pdf
 interests: [Computer Vision, Machine Perception, Image and Video Processing, Deep Learning, Machine Learning]
 # projects: [Low-Light Images and Videos] # Think this is outdated now
-permalink: /:categories/:title/
+# permalink: /:categories/:title/
+collections:
+  # blog:
+  #   output: true
+  #   permalink: /blog/:title/
+  research:
+    output: true
+    permalink: /research/:title/
 future: true # Allows for "future" posts to be displayed
 
 url: ""

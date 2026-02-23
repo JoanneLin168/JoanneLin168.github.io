@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/low-light/LoIS/</loc>
+<loc>http://localhost:4000/research/LoIS/</loc>
 <lastmod>2025-03-07T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/low-light/LoIST/</loc>
+<loc>http://localhost:4000/research/LoIST/</loc>
 <lastmod>2025-05-29T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/low-light/DEN/</loc>
+<loc>http://localhost:4000/research/DEN/</loc>
 <lastmod>2025-10-26T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/low-light/ELVIS/</loc>
-<lastmod>2025-12-01T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/research/ELVIS/</loc>
+<lastmod>2026-06-03T00:00:00+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

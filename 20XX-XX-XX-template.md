@@ -1,6 +1,7 @@
 ---
 title: Title
 alt_title: Alternative Title # might be outdated
+supercategory: research
 categories: [Low-Light]
 about: Add summary here
 authors:

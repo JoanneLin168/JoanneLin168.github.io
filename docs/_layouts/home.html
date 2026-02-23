@@ -90,7 +90,12 @@ layout: default
             <h5>Featured Publications</h5>
             <div class="publications-wrapper">
                 <div id="publications-container" class="publications-grid">
-                    {% assign featuredPosts = site.posts | where: 'featured', 'true' %}
+                    <!-- {% assign featuredPosts = site.research | where: 'featured', 'true' %} -->
+                    {% assign featuredPosts = site.research
+                        | where: "featured", true
+                        | sort: "date"
+                        | reverse
+                    %}
                     {% for post in featuredPosts %}
                         {% assign pdfUrl = post.publication.paper | default: post.publication.arxiv %}
                         {% assign year = post.date | date: "%y" %}
@@ -214,7 +219,11 @@ layout: default
 
             <h5>All Publications</h5>
             <ul class="publications-list">
-            {% for post in site.posts %}
+            {% assign researchPosts = site.research
+                | sort: "date"
+                | reverse
+            %}
+            {% for post in researchPosts %}
                 {% assign pdfUrl = post.publication.paper | default: post.publication.arxiv %}
                 {% assign year = post.date | date: "%y" %}
                 {% if post.publication.journal != "arXiv" %}
