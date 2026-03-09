@@ -62,6 +62,12 @@ layout: default
                     <i class="ai ai-arxiv"></i> ArXiv
                 </a>
                 {% endif %}
+
+                {% if page.dataset %}
+                <a href="{{ page.dataset }}" class="btn btn-dark btn-lg">
+                    <i class="bi bi-database"></i> Dataset
+                </a>
+                {% endif %}
                 
                 {% if page.github %}
                 <a href="{{ page.github }}" class="btn btn-dark btn-lg">
@@ -92,6 +98,14 @@ layout: default
                     <source src="{{ site.baseurl }}/{{ page.video }}" type="video/mp4">
                 </video>
             </div>
+        </div>
+        <hr />
+        {% endif %}
+
+        {% if page.dataset %}
+        <div class="container-md">
+            <h2>Dataset</h2>
+            Download the dataset here: <a href="{{ page.dataset }}">{{ page.dataset }}</a>
         </div>
         <hr />
         {% endif %}

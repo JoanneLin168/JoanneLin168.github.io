@@ -23,6 +23,7 @@ publication:
     journal_display:  # making this separate key in case it is Oral/Highlight/Workshop paper
     supplementary:
 github:
+dataset:
 citation: |
     This is a multiline YAML frontmatter.
     You can add multiple lines here.
