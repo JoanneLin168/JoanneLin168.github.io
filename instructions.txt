@@ -1,6 +1,8 @@
 # Setting up Jekyll pages:
 Download ruby version >= 3.1.3 and < 3.2 (3.2 has bugs)
 
+(maybe: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.1.3-1/rubyinstaller-devkit-3.1.3-1-x64.exe)
+
 Tutorial for making a Jekyll page: https://jekyllrb.com/tutorials/convert-site-to-jekyll/
 
 Jekyll stuff:
